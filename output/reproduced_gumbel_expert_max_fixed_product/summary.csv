@@ -1,0 +1,3 @@
+pp,ep,local_bs,num_actual_samples,target_pred_expected_x,reproduced_pred_expected_x,target_actual_expected_x,recomputed_actual_expected_x,target_tvd,reproduced_tvd,gumbel_loc_mu,gumbel_scale_beta,distribution_csv
+1,4,32,5952,20.492179563954092,20.492179563954085,22.88155241935484,22.881552419354836,0.2484925045833015,0.24841491718624348,17.63013375447141,4.42,/home/kms20201444/MoE_profiling/output/reproduced_gumbel_expert_max_fixed_product/pp1_ep4_localbs32_distribution.csv
+2,2,16,11904,10.847393074402184,10.847393074402184,11.784358198924732,11.784358198924732,0.2445763074995412,0.24443838951662333,9.200284257064897,2.1999999999999997,/home/kms20201444/MoE_profiling/output/reproduced_gumbel_expert_max_fixed_product/pp2_ep2_localbs16_distribution.csv

@@ -1,0 +1,5 @@
+case,actual_expected_max,gumbel_expected_max,tvd,plot_path
+all,48.127856182795696,44.02948404219578,0.16552421416464538,./output/actual_vs_gumbel_layerwise/actual_vs_gumbel_layerwise_ep4_bs32_source_ep4_bs1_all.png
+layer0,47.83870967741935,39.89257617860469,0.41184499003995423,./output/actual_vs_gumbel_layerwise/actual_vs_gumbel_layerwise_ep4_bs32_source_ep4_bs1_layer0.png
+layer10,45.88306451612903,41.6344757224138,0.43354163392293926,./output/actual_vs_gumbel_layerwise/actual_vs_gumbel_layerwise_ep4_bs32_source_ep4_bs1_layer10.png
+layer23,48.24193548387097,45.49822519477261,0.23476146879041823,./output/actual_vs_gumbel_layerwise/actual_vs_gumbel_layerwise_ep4_bs32_source_ep4_bs1_layer23.png

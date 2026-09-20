@@ -1,0 +1,5 @@
+local_bs,scope,threshold,first_level,spike_prob,tvd
+32,global,0.01,L0_global_iid_shuffle,0.0,0.8394707122395267
+32,all_layers,0.01,L0_global_iid_shuffle,0.0,
+16,global,0.01,L0_global_iid_shuffle,0.0,0.7542022720099244
+16,all_layers,0.01,L0_global_iid_shuffle,0.0,

@@ -1,0 +1,187 @@
+\section*{Formulas Used in \texttt{count\_expert\_tokens.py}}
+
+This note summarizes the mathematical steps used in
+\texttt{MoE\_profiling/count\_expert\_tokens.py}.
+
+\subsection*{1. Setup}
+
+Let
+\[
+N = \text{num\_of\_experts}, \qquad
+G = \text{ep\_size}, \qquad
+k = \text{top\_k}, \qquad
+B = \text{target batch size}.
+\]
+
+The number of experts assigned to each GPU is
+\[
+n = \frac{N}{G}.
+\]
+
+For an expert index \(e \in \{0,1,\dots,N-1\}\), its GPU index is
+\[
+g(e) = \left\lfloor \frac{e}{n} \right\rfloor.
+\]
+
+\subsection*{2. Token-Level Expert Selection}
+
+For one token, the router selects a top-\(k\) expert list
+\[
+E = (e_1, e_2, \dots, e_k).
+\]
+
+This is converted into a GPU routed-load pattern
+\[
+X = (X_1, X_2, \dots, X_G),
+\]
+where
+\[
+X_r = \sum_{j=1}^{k} \mathbf{1}[g(e_j) = r],
+\qquad r = 1,2,\dots,G.
+\]
+
+By construction,
+\[
+\sum_{r=1}^{G} X_r = k.
+\]
+
+\subsection*{3. Empirical Token Pattern PMF from Source Data}
+
+Suppose the source file contains \(T\) tokens in total, and the GPU pattern
+for token \(t\) is \(X^{(t)}\).
+
+The empirical token-level PMF is
+\[
+\hat{p}(x)
+=
+\frac{1}{T}
+\sum_{t=1}^{T} \mathbf{1}[X^{(t)} = x].
+\]
+
+This corresponds to the \texttt{pattern\_pmf} dictionary in the code.
+
+\subsection*{4. Batch-Level GPU Load Vector}
+
+To predict a larger batch of size \(B\), the script assumes that token patterns
+are i.i.d. samples from \(\hat{p}(x)\).
+
+Let
+\[
+X^{[1]}, X^{[2]}, \dots, X^{[B]} \overset{\text{i.i.d.}}{\sim} \hat{p}(x).
+\]
+
+Then the total batch-level GPU routed-token load vector is
+\[
+L = \sum_{b=1}^{B} X^{[b]}
+= (L_1, L_2, \dots, L_G).
+\]
+
+Its exact distribution is the \(B\)-fold convolution of the token-level PMF:
+\[
+\mathbb{P}(L = \ell)
+=
+\sum_{x^{[1]} + \cdots + x^{[B]} = \ell}
+\prod_{b=1}^{B} \hat{p}(x^{[b]}).
+\]
+
+The code computes this convolution exactly using repeated sparse distribution
+convolution with binary exponentiation.
+
+\subsection*{5. Max Routed Tokens per GPU}
+
+The quantity of interest is the maximum routed-token load among GPUs:
+\[
+Y = \max_{1 \le r \le G} L_r.
+\]
+
+The final probability mass function is therefore
+\[
+\mathbb{P}(Y = m)
+=
+\sum_{\ell : \max_r \ell_r = m}
+\mathbb{P}(L = \ell).
+\]
+
+This is the quantity printed in the distribution table:
+\[
+\mathbb{P}(Y=0), \mathbb{P}(Y=1), \dots, \mathbb{P}(Y=Bk).
+\]
+
+\subsection*{6. Expected Value and Percentile}
+
+Once the PMF of \(Y\) is obtained, the expected maximum routed-token load is
+\[
+\mathbb{E}[Y]
+=
+\sum_{m=0}^{Bk} m \, \mathbb{P}(Y=m).
+\]
+
+The \(q\)-quantile is defined as the smallest \(m\) such that
+\[
+\sum_{i=0}^{m} \mathbb{P}(Y=i) \ge q.
+\]
+
+In particular, the script reports the \(95\)-th percentile:
+\[
+\mathrm{p95}
+=
+\min \left\{
+m :
+\sum_{i=0}^{m} \mathbb{P}(Y=i) \ge 0.95
+\right\}.
+\]
+
+\subsection*{7. Ideal Average Load per GPU}
+
+The total number of routed assignments in a batch is
+\[
+Bk.
+\]
+
+If they were perfectly balanced across \(G\) GPUs, the ideal average load per GPU would be
+\[
+\mathrm{avg\_load}
+=
+\frac{Bk}{G}.
+\]
+
+\subsection*{8. Imbalance Ratio}
+
+The script defines the imbalance ratio as
+\[
+\mathrm{Imbalance\ Ratio}
+=
+\frac{\mathbb{E}[Y]}{\mathrm{avg\_load}}
+=
+\frac{\mathbb{E}[Y]}{Bk/G}.
+\]
+
+\subsection*{9. Layer-Wise Averaging}
+
+If the model has \(R\) valid layers and each layer yields a PMF
+\(\mathbb{P}_{\ell}(Y=m)\), then the final reported average distribution is
+\[
+\bar{P}(Y=m)
+=
+\frac{1}{R}
+\sum_{\ell=1}^{R} \mathbb{P}_{\ell}(Y=m).
+\]
+
+The same averaging is applied to the expected value, percentile, and imbalance ratio:
+\[
+\overline{\mathbb{E}[Y]}
+=
+\frac{1}{R}\sum_{\ell=1}^{R}\mathbb{E}_{\ell}[Y].
+\]
+
+\[
+\overline{\mathrm{p95}}
+=
+\frac{1}{R}\sum_{\ell=1}^{R}\mathrm{p95}_{\ell}.
+\]
+
+\[
+\overline{\mathrm{Imbalance\ Ratio}}
+=
+\frac{1}{R}\sum_{\ell=1}^{R}\mathrm{Imbalance\ Ratio}_{\ell}.
+\]

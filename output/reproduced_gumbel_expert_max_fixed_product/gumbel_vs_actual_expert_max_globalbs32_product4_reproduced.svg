@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600" y="35" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700">Gumbel vs Actual Expert-Max Distribution (global bs=32, EP*PP=4)</text>
+<text x="310.0" y="100" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700">PP=1, EP=4, local BS=32</text>
+<text x="310.0" y="122" text-anchor="middle" font-family="Arial" font-size="13">TVD=0.2484, E[Gumbel]=20.49, E[Actual]=22.88</text>
+<line x1="110" y1="375" x2="540" y2="375" stroke="#222" stroke-width="1"/>
+<line x1="110" y1="115" x2="110" y2="375" stroke="#222" stroke-width="1"/>
+<line x1="110.0" y1="375" x2="110.0" y2="380" stroke="#222"/>
+<text x="110.0" y="397" text-anchor="middle" font-family="Arial" font-size="11">0</text>
+<line x1="217.5" y1="375" x2="217.5" y2="380" stroke="#222"/>
+<text x="217.5" y="397" text-anchor="middle" font-family="Arial" font-size="11">8</text>
+<line x1="325.0" y1="375" x2="325.0" y2="380" stroke="#222"/>
+<text x="325.0" y="397" text-anchor="middle" font-family="Arial" font-size="11">16</text>
+<line x1="432.5" y1="375" x2="432.5" y2="380" stroke="#222"/>
+<text x="432.5" y="397" text-anchor="middle" font-family="Arial" font-size="11">24</text>
+<line x1="540.0" y1="375" x2="540.0" y2="380" stroke="#222"/>
+<text x="540.0" y="397" text-anchor="middle" font-family="Arial" font-size="11">32</text>
+<line x1="110" y1="375.0" x2="540" y2="375.0" stroke="#ddd" stroke-width="1"/>
+<text x="103" y="379.0" text-anchor="end" font-family="Arial" font-size="11">0.00</text>
+<line x1="110" y1="310.0" x2="540" y2="310.0" stroke="#ddd" stroke-width="1"/>
+<text x="103" y="314.0" text-anchor="end" font-family="Arial" font-size="11">0.07</text>
+<line x1="110" y1="245.0" x2="540" y2="245.0" stroke="#ddd" stroke-width="1"/>
+<text x="103" y="249.0" text-anchor="end" font-family="Arial" font-size="11">0.13</text>
+<line x1="110" y1="180.0" x2="540" y2="180.0" stroke="#ddd" stroke-width="1"/>
+<text x="103" y="184.0" text-anchor="end" font-family="Arial" font-size="11">0.20</text>
+<line x1="110" y1="115.0" x2="540" y2="115.0" stroke="#ddd" stroke-width="1"/>
+<text x="103" y="119.0" text-anchor="end" font-family="Arial" font-size="11">0.26</text>
+<text x="310.0" y="425" text-anchor="middle" font-family="Arial" font-size="13">X = max expert token count</text>
+<text x="73" y="250.0" text-anchor="middle" transform="rotate(-90 73 250.0)" font-family="Arial" font-size="13">Probability</text>
+<polyline points="110.00,375.00 123.44,375.00 136.88,375.00 150.31,375.00 163.75,375.00 177.19,375.00 190.62,375.00 204.06,374.99 217.50,374.87 230.94,374.28 244.38,372.27 257.81,367.37 271.25,358.40 284.69,345.45 298.12,330.18 311.56,315.26 325.00,303.17 338.44,295.48 351.88,292.60 365.31,294.01 378.75,298.68 392.19,305.46 405.62,313.33 419.06,321.46 432.50,329.32 445.94,336.55 459.38,342.98 472.81,348.57 486.25,353.34 499.69,357.34 513.12,360.67 526.56,363.41 540.00,327.95" fill="none" stroke="#1f77b4" stroke-width="2.4"/>
+<circle cx="244.38" cy="372.27" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="257.81" cy="367.37" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="271.25" cy="358.40" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="284.69" cy="345.45" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="298.12" cy="330.18" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="311.56" cy="315.26" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="325.00" cy="303.17" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="338.44" cy="295.48" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="351.88" cy="292.60" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="365.31" cy="294.01" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="378.75" cy="298.68" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="392.19" cy="305.46" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="405.62" cy="313.33" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="419.06" cy="321.46" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="432.50" cy="329.32" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="445.94" cy="336.55" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="459.38" cy="342.98" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="472.81" cy="348.57" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="486.25" cy="353.34" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="499.69" cy="357.34" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="513.12" cy="360.67" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="526.56" cy="363.41" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="540.00" cy="327.95" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<polyline points="110.00,375.00 123.44,375.00 136.88,375.00 150.31,375.00 163.75,375.00 177.19,375.00 190.62,375.00 204.06,375.00 217.50,374.83 230.94,373.17 244.38,368.66 257.81,359.49 271.25,348.15 284.69,333.97 298.12,330.14 311.56,327.14 325.00,325.80 338.44,329.81 351.88,328.47 365.31,329.97 378.75,326.97 392.19,331.97 405.62,332.97 419.06,336.98 432.50,340.31 445.94,341.48 459.38,342.81 472.81,345.48 486.25,347.48 499.69,352.99 513.12,355.32 526.56,355.15 540.00,142.86" fill="none" stroke="#d62728" stroke-width="2.4"/>
+<circle cx="244.38" cy="368.66" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="257.81" cy="359.49" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="271.25" cy="348.15" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="284.69" cy="333.97" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="298.12" cy="330.14" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="311.56" cy="327.14" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="325.00" cy="325.80" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="338.44" cy="329.81" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="351.88" cy="328.47" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="365.31" cy="329.97" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="378.75" cy="326.97" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="392.19" cy="331.97" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="405.62" cy="332.97" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="419.06" cy="336.98" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="432.50" cy="340.31" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="445.94" cy="341.48" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="459.38" cy="342.81" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="472.81" cy="345.48" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="486.25" cy="347.48" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="499.69" cy="352.99" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="513.12" cy="355.32" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="526.56" cy="355.15" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="540.00" cy="142.86" r="2.3" fill="#d62728" opacity="0.85"/>
+<rect x="405" y="124" width="135" height="48" fill="white" stroke="#ccc"/>
+<line x1="415" y1="142" x2="440" y2="142" stroke="#1f77b4" stroke-width="3"/><text x="449" y="146" font-family="Arial" font-size="12">Gumbel</text>
+<line x1="415" y1="162" x2="440" y2="162" stroke="#d62728" stroke-width="3"/><text x="449" y="166" font-family="Arial" font-size="12">Actual</text>
+<text x="900.0" y="100" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700">PP=2, EP=2, local BS=16</text>
+<text x="900.0" y="122" text-anchor="middle" font-family="Arial" font-size="13">TVD=0.2444, E[Gumbel]=10.85, E[Actual]=11.78</text>
+<line x1="700" y1="375" x2="1130" y2="375" stroke="#222" stroke-width="1"/>
+<line x1="700" y1="115" x2="700" y2="375" stroke="#222" stroke-width="1"/>
+<line x1="700.0" y1="375" x2="700.0" y2="380" stroke="#222"/>
+<text x="700.0" y="397" text-anchor="middle" font-family="Arial" font-size="11">0</text>
+<line x1="807.5" y1="375" x2="807.5" y2="380" stroke="#222"/>
+<text x="807.5" y="397" text-anchor="middle" font-family="Arial" font-size="11">4</text>
+<line x1="915.0" y1="375" x2="915.0" y2="380" stroke="#222"/>
+<text x="915.0" y="397" text-anchor="middle" font-family="Arial" font-size="11">8</text>
+<line x1="1022.5" y1="375" x2="1022.5" y2="380" stroke="#222"/>
+<text x="1022.5" y="397" text-anchor="middle" font-family="Arial" font-size="11">12</text>
+<line x1="1130.0" y1="375" x2="1130.0" y2="380" stroke="#222"/>
+<text x="1130.0" y="397" text-anchor="middle" font-family="Arial" font-size="11">16</text>
+<line x1="700" y1="375.0" x2="1130" y2="375.0" stroke="#ddd" stroke-width="1"/>
+<text x="693" y="379.0" text-anchor="end" font-family="Arial" font-size="11">0.00</text>
+<line x1="700" y1="310.0" x2="1130" y2="310.0" stroke="#ddd" stroke-width="1"/>
+<text x="693" y="314.0" text-anchor="end" font-family="Arial" font-size="11">0.07</text>
+<line x1="700" y1="245.0" x2="1130" y2="245.0" stroke="#ddd" stroke-width="1"/>
+<text x="693" y="249.0" text-anchor="end" font-family="Arial" font-size="11">0.14</text>
+<line x1="700" y1="180.0" x2="1130" y2="180.0" stroke="#ddd" stroke-width="1"/>
+<text x="693" y="184.0" text-anchor="end" font-family="Arial" font-size="11">0.21</text>
+<line x1="700" y1="115.0" x2="1130" y2="115.0" stroke="#ddd" stroke-width="1"/>
+<text x="693" y="119.0" text-anchor="end" font-family="Arial" font-size="11">0.29</text>
+<text x="900.0" y="425" text-anchor="middle" font-family="Arial" font-size="13">X = max expert token count</text>
+<text x="663" y="250.0" text-anchor="middle" transform="rotate(-90 663 250.0)" font-family="Arial" font-size="13">Probability</text>
+<polyline points="700.00,375.00 726.88,375.00 753.75,375.00 780.62,375.00 807.50,374.98 834.38,373.95 861.25,363.52 888.12,327.57 915.00,273.07 941.88,232.81 968.75,225.40 995.62,243.83 1022.50,272.70 1049.38,300.97 1076.25,323.93 1103.12,340.82 1130.00,312.14" fill="none" stroke="#1f77b4" stroke-width="2.4"/>
+<circle cx="861.25" cy="363.52" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="888.12" cy="327.57" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="915.00" cy="273.07" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="941.88" cy="232.81" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="968.75" cy="225.40" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="995.62" cy="243.83" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="1022.50" cy="272.70" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="1049.38" cy="300.97" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="1076.25" cy="323.93" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="1103.12" cy="340.82" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<circle cx="1130.00" cy="312.14" r="2.3" fill="#1f77b4" opacity="0.85"/>
+<polyline points="700.00,375.00 726.88,375.00 753.75,375.00 780.62,375.00 807.50,374.62 834.38,367.36 861.25,344.44 888.12,311.06 915.00,289.75 941.88,285.63 968.75,288.15 995.62,294.95 1022.50,300.52 1049.38,312.06 1076.25,322.67 1103.12,331.61 1130.00,142.86" fill="none" stroke="#d62728" stroke-width="2.4"/>
+<circle cx="834.38" cy="367.36" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="861.25" cy="344.44" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="888.12" cy="311.06" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="915.00" cy="289.75" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="941.88" cy="285.63" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="968.75" cy="288.15" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="995.62" cy="294.95" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="1022.50" cy="300.52" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="1049.38" cy="312.06" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="1076.25" cy="322.67" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="1103.12" cy="331.61" r="2.3" fill="#d62728" opacity="0.85"/>
+<circle cx="1130.00" cy="142.86" r="2.3" fill="#d62728" opacity="0.85"/>
+<rect x="995" y="124" width="135" height="48" fill="white" stroke="#ccc"/>
+<line x1="1005" y1="142" x2="1030" y2="142" stroke="#1f77b4" stroke-width="3"/><text x="1039" y="146" font-family="Arial" font-size="12">Gumbel</text>
+<line x1="1005" y1="162" x2="1030" y2="162" stroke="#d62728" stroke-width="3"/><text x="1039" y="166" font-family="Arial" font-size="12">Actual</text>
+</svg>
