@@ -2,6 +2,9 @@
 
 `MoE_profiling` is an experimental workspace for analyzing expert load distributions from MoE routing results and evaluating how routing imbalance changes with batch size.
 
+The scope of this work is highlighted by the red box in the figure below.
+<img width="1193" height="592" alt="image" src="https://github.com/user-attachments/assets/ba730fb1-5325-4e51-bd5b-5bbb6fcfcff9" />
+
 The repository includes experiments on:
 
 - expert load distributions
