@@ -142,7 +142,7 @@ This directory contains early exploratory and baseline experiments.
 
 The main focus is on expert selection probabilities, routing distributions, correlations, and how imbalance changes with batch size.
 
-Typical scripts include:
+scripts include:
 
 - `calculate_prob.py`
   - Initial probability calculations and heatmap/line-plot generation
@@ -175,26 +175,32 @@ This directory contains experiments that use Gumbel approximations for max-load 
 
 Several scripts use `scipy.stats.gumbel_r` to fit or predict the distribution of maximum expert or GPU load.
 
-Typical scripts include:
+scripts include:
 
 - `plot_actual_vs_gumbel.py`
   - Compares actual distributions against Gumbel approximations
 - `plot_actual_vs_gumbel_layerwise.py`
   - Performs layer-wise Gumbel fitting and comparison
-- `plot_actual_vs_gumbel_spike_removed.py`
-  - Repeats Gumbel fitting after removing specific spikes
 - `plot_actual_vs_gumbel_loadaware.py`
   - Applies a load-aware scoring rule instead of a simple maximum
+- `plot_actual_vs_gumbel_max_lg_layerwise.py`
+  - Performs layer-wise analysis for the max-load/Gumbel formulation
+- `plot_actual_vs_gumbel_max_lg_spike_removed.py`
+  - Repeats the max-load/Gumbel analysis after removing spikes
+- `plot_actual_vs_gumbel_spike_removed.py`
+  - Repeats Gumbel fitting after removing specific spikes
 - `plot_gumbel_expert_max_fixed_product.py`
   - Compares expert-max distributions under a fixed `EP * PP`
 - `plot_gumbel_expert_max_per_layer.py`
   - Evaluates per-layer expert-max distributions using Gumbel fitting
+- `plot_predicted_gumbel_peff_sweep.py`
+  - Sweeps the effective parameter used in the predicted Gumbel model
 
 ## `experiments/20_extended`
 
 This directory contains experiments that extend the initial exact-distribution and Gumbel-based analyses.
 
-Typical scripts include:
+scripts include:
 
 - `count_expert_tokens.py`
   - Computes token-level GPU dispatch-pattern PMFs and exact-convolution-based distributions
